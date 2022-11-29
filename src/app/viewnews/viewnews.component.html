@@ -1,0 +1,29 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row g-3 mt-3">
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 col-xxl-3" *ngFor="let i of data">
+
+                      <div class="card" style="width: 60rem;" *ngFor="let j of i.articles">
+                        <!-- <h6 class="card-title">{{j.source.id}}</h6> -->
+                        <h6 class="card-title">Author:{{j.author}}</h6>
+                        <h5 class="card-title">{{j.source.name}}</h5>
+                        <h3 class="card-title">{{j.title}}</h3>
+                        <h6 class="card-title">{{j.description}}</h6>
+                          <img height="300px" width="200px" src={{j.urlToImage}} class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <p class="card-text">{{j.url}}</p>
+                            <!-- <p class="card-text">{{i.status}}</p> -->
+                            <!-- <p class="card-text">{{i.totalResults}}</p> -->
+                            <p class="card-text">Published at:{{j.publishedAt}}</p>
+                            <p class="card-text">Content:{{j.content}}</p>
+                          </div>
+                        </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
